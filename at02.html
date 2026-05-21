@@ -3,118 +3,76 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Notas Bimestrais — Cap. 4 / Ativ. 2</title>
+  <title>PWEB1 — Cap. 05 — AT02 — Cadastro de Usuário</title>
 </head>
 
 <body>
 
   <header>
-    <h1>Notas Bimestrais da Turma</h1>
-
-    <p>
-      <a href="../index.html">
-      ← Voltar para a página principal
-      </a>
-    </p>
+    <h1>Cadastro de Usuário</h1>
+    <p><a href="../index.html">← Voltar para a página principal</a></p>
   </header>
 
   <main>
 
-    <table border="1">
+    <form action="https://httpbin.org/post" method="post">
 
-      <caption>
-      Notas Bimestrais — Turma SI-2026, 2026
-      </caption>
+      <p>
+        <label for="nome">Nome completo:</label><br>
+        <input type="text" id="nome" name="nome" minlength="3" required>
+      </p>
 
-      <thead>
+      <p>
+        <label for="email">E-mail:</label><br>
+        <input type="email" id="email" name="email" required>
+      </p>
 
-        <tr>
-          <th scope="col" rowspan="2">Aluno</th>
-         <th scope="col" colspan="4">Bimestres</th>
-          <th scope="col" rowspan="2">Média Final</th>
-        </tr>
+      <p>
+        <label for="senha">Senha:</label><br>
+        <input type="password" id="senha" name="senha" minlength="8" required>
+      </p>
 
-        <tr>
-          <th scope="col">1º Bimestre</th>
-          <th scope="col">2º Bimestre</th>
-        <th scope="col">3º Bimestre</th>
-          <th scope="col">4º Bimestre</th>
-        </tr>
+      <p>
+        <label for="nascimento">Data de nascimento:</label><br>
+        <input type="date" id="nascimento" name="nascimento" required>
+      </p>
 
-      </thead>
+      <fieldset>
+        <legend>Gênero</legend>
 
-      <tbody>
+        <label>
+          <input type="radio" name="genero" value="masculino">
+          Masculino
+        </label><br>
 
-        <tr>
-          <th scope="row">Ana Clara</th>
-          <td>8.5</td>
-          <td>9.0</td>
-        <td>8.0</td>
-          <td>9.5</td>
-          <td>8.8</td>
-        </tr>
+        <label>
+          <input type="radio" name="genero" value="feminino">
+          Feminino
+        </label><br>
 
-        <tr>
-          <th scope="row">Carlos Henrique</th>
-          <td>7.0</td>
-          <td>6.5</td>
-         <td>8.0</td>
-          <td>7.5</td>
-          <td>7.3</td>
-        </tr>
+        <label>
+          <input type="radio" name="genero" value="outro">
+          Outro
+        </label><br>
 
-        <tr>
-          <th scope="row">Fernanda Lima</th>
-          <td>9.0</td>
-          <td>8.5</td>
-          <td>9.5</td>
-          <td>10.0</td>
-          <td>9.3</td>
-        </tr>
+        <label>
+          <input type="radio" name="genero" value="prefiro_nao_informar">
+          Prefiro não informar
+        </label>
 
-        <tr>
-          <th scope="row">João Pedro</th>
-          <td>6.0</td>
-          <td>7.0</td>
-          <td>6.5</td>
-          <td>8.0</td>
-          <td>6.9</td>
-        </tr>
+      </fieldset>
 
-        <tr>
-          <th scope="row">Mariana Souza</th>
-          <td>8.0</td>
-          <td>8.5</td>
-          <td>7.5</td>
-          <td>9.0</td>
-          <td>8.3</td>
-        </tr>
+      <p>
+        <label>
+          <input type="checkbox" name="aceite" value="sim" required>
+          Aceito os termos de uso
+        </label>
+      </p>
 
-        <tr>
-          <th scope="row">Lucas Almeida</th>
-          <td>7.5</td>
-          <td>8.0</td>
-          <td>7.0</td>
-          <td>8.5</td>
-          <td>7.8</td>
-        </tr>
+      <button type="submit">Criar conta</button>
+      <button type="reset">Limpar campos</button>
 
-      </tbody>
-
-      <tfoot>
-
-        <tr>
-          <th>Média da turma</th>
-  <td>7.7</td>
-          <td>7.9</td>
-  <td>7.8</td>
-    <td>8.7</td>
-          <td>8.0</td>
-        </tr>
-
-    </tfoot>
-
-</table>
+    </form>
 
   </main>
 

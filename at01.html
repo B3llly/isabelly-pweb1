@@ -1,66 +1,86 @@
 <!DOCTYPE html>
 <html lang="pt-BR">
 <head>
- <meta charset="UTF-8">
- <meta name="viewport" content="width=device-width, initial-scale=1.0">
- <title>Horário Semanal — Cap. 4 / Ativ. 1</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>PWEB1 - Cap. 05 AT01 - Formulário de Contato</title>
 </head>
-
 <body>
 
-<header>
-      <h1>Horário Semanal — Sistemas de Informação, 1º Período</h1>
+    <header>
+        <h1>Formulário de Contato</h1>
+        <p><a href="../index.html">← Voltar para a página principal</a></p>
+    </header>
 
- <p>
-     <a href="../index.html">
-              ← Voltar para a página principal
-      </a>
- </p>
- </header>
+    <main>
+        
+        <p>* Campos obrigatórios</p>
 
- <main>
+        <form action="https://httpbin.org/get" method="get">
+            
+            <fieldset>
+                <legend>Informações de Contato</legend>
 
-  <table border="1">
+                <div>
+                    <label for="nome">Nome *:</label>
+                    <input 
+                        type="text" 
+                        id="nome" 
+                        name="nome" 
+                        required 
+                        aria-required="true" 
+                        autocomplete="name" 
+                        placeholder="Digite seu nome completo"
+                    />
+                </div>
 
- <tr>
-      <th>Horário</th>
-     <th>Segunda-feira</th>
-     <th>Terça-feira</th>
-        <th>Quarta-feira</th>
-     <th>Quinta-feira</th>
-        <th>Sexta-feira</th>
-      </tr>
+                <div>
+                    <label for="email">E-mail *:</label>
+                    <input 
+                        type="email" 
+                        id="email" 
+                        name="email" 
+                        required 
+                        aria-required="true" 
+                        autocomplete="email" 
+                        placeholder="exemplo@email.com"
+                    />
+                </div>
 
-      <tr>
-        <th>08h–10h</th>
-        <td>Programação Web</td>
-        <td>Banco de Dados</td>
-        <td>Algoritmos</td>
-        <td>Matemática</td>
-        <td>Engenharia de Software</td>
-      </tr>
+                <div>
+                    <label for="assunto">Assunto *:</label>
+                    <input 
+                        type="text" 
+                        id="assunto" 
+                        name="assunto" 
+                        required 
+                        aria-required="true" 
+                        placeholder="Motivo do contato"
+                    />
+                </div>
 
-      <tr>
-        <th>10h–12h</th>
-        <td>Redes de Computadores</td>
-      <td>Programação Web</td>
-        <td>Banco de Dados</td>
-        <td>—</td>
-     <td>Algoritmos</td>
-      </tr>
+                <div>
+                    <label for="mensagem">Mensagem *:</label>
+                    <textarea 
+                        id="mensagem" 
+                        name="mensagem" 
+                        rows="5" 
+                        required 
+                        aria-required="true" 
+                        placeholder="Escreva sua mensagem aqui..."
+                    ></textarea>
+                </div>
 
-      <tr>
-        <th>14h–16h</th>
-        <td>Matemática</td>
-      <td>Engenharia de Software</td>
-        <td>—</td>
-      <td>Redes de Computadores</td>
-        <td>Programação Web</td>
-      </tr>
+            </fieldset>
 
-    </table>
+            <div style="margin-top: 15px;">
+                <button type="submit">Enviar Formulário</button>
+                <button type="reset">Limpar</button>
+            </div>
 
-  </main>
+        </form>
+
+    </main>
 
 </body>
 </html>
